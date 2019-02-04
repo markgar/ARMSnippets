@@ -14,18 +14,21 @@ namespace ARMSnippets
 
             Hashtable snippets = new Hashtable();
 
-            foreach (string file in Directory.GetFiles("base-templates"))
+            foreach (string file in Directory.GetFiles("templates-base"))
             {
                 string fileName = file.Split("\\")[1];
                 string fileNameWithoutExtension = fileName.Split(".")[0];
-                snippets.Add(fileNameWithoutExtension, new Snippet(fileName));
+                Snippet snippet = new Snippet(file);
+                snippet.prefix = "arm!-" + fileNameWithoutExtension;
+                snippets.Add(fileNameWithoutExtension, snippet);
+
             }
 
-            foreach (string file in Directory.GetFiles("resource-templates"))
+            foreach (string file in Directory.GetFiles("templates-resources"))
             {
                 string fileName = file.Split("\\")[1];
                 string fileNameWithoutExtension = fileName.Split(".")[0];
-                snippets.Add(fileNameWithoutExtension, new Snippet(fileName));
+                snippets.Add(fileNameWithoutExtension, new Snippet(file));
             }
 
             string json = JsonConvert.SerializeObject(snippets);

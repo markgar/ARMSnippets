@@ -9,14 +9,14 @@ namespace ARMSnippets.models
         public List<string> body {get; set;}
         public string description {get; set;}
 
-        public Snippet(string Filename)
+        public Snippet(string FilenameAndPath)
         {
             string line;
             body = new List<string>();
 
             // Read the file and display it line by line.  
             System.IO.StreamReader file =
-                new System.IO.StreamReader(@".\templates\" + Filename);
+                new System.IO.StreamReader(FilenameAndPath);
 
             while ((line = file.ReadLine()) != null)
             {
@@ -27,8 +27,8 @@ namespace ARMSnippets.models
 
             file.Close();
 
-            prefix = "arm-" + Filename.Split('.')[0];
-            description = Filename.Split('.')[0] + " ARM Template";
+            prefix = "arm-" + FilenameAndPath.Split('\\')[1].Split('.')[0];
+            description = FilenameAndPath.Split('\\')[1].Split('.')[0] + " ARM Template";
         }
     }
 }

@@ -1,16 +1,6 @@
-"parameters": {
-    "storageSKU": {
-      "type": "string",
-      "allowedValues": [
-        "Standard_LRS",
-        "Standard_ZRS",
-        "Standard_GRS",
-        "Standard_RAGRS",
-        "Premium_LRS"
-      ],
-      "defaultValue": "Standard_LRS",
-      "metadata": {
-        "description": "The type of replication to use for the storage account."
-      }
-    }   
-  }
+"parameter1": {
+  "type": "string",
+  "metadata": {
+       "description": "description"
+   }
+}
