@@ -14,7 +14,14 @@ namespace ARMSnippets
 
             Hashtable snippets = new Hashtable();
 
-            foreach (string file in Directory.GetFiles("templates"))
+            foreach (string file in Directory.GetFiles("base-templates"))
+            {
+                string fileName = file.Split("\\")[1];
+                string fileNameWithoutExtension = fileName.Split(".")[0];
+                snippets.Add(fileNameWithoutExtension, new Snippet(fileName));
+            }
+
+            foreach (string file in Directory.GetFiles("resource-templates"))
             {
                 string fileName = file.Split("\\")[1];
                 string fileNameWithoutExtension = fileName.Split(".")[0];
