@@ -1,0 +1,48 @@
+{
+    "name": "string",
+    "type": "Microsoft.Web/serverfarms",
+    "apiVersion": "2018-02-01",
+    "kind": "string",
+    "location": "string",
+    "tags": {},
+    "properties": {
+      "workerTierName": "string",
+      "adminSiteName": "string",
+      "hostingEnvironmentProfile": {
+        "id": "string"
+      },
+      "perSiteScaling": boolean,
+      "maximumElasticWorkerCount": "integer",
+      "isSpot": boolean,
+      "spotExpirationTime": "string",
+      "freeOfferExpirationTime": "string",
+      "reserved": boolean,
+      "isXenon": boolean,
+      "hyperV": boolean,
+      "targetWorkerCount": "integer",
+      "targetWorkerSizeId": "integer"
+    },
+    "sku": {
+      "name": "string",
+      "tier": "string",
+      "size": "string",
+      "family": "string",
+      "capacity": "integer",
+      "skuCapacity": {
+        "minimum": "integer",
+        "maximum": "integer",
+        "default": "integer",
+        "scaleType": "string"
+      },
+      "locations": [
+        "string"
+      ],
+      "capabilities": [
+        {
+          "name": "string",
+          "value": "string",
+          "reason": "string"
+        }
+      ]
+    }
+  }

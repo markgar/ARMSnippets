@@ -1,0 +1,9 @@
+{
+    "name": "string",
+    "type": "Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers",
+    "apiVersion": "2018-02-01",
+    "kind": "string",
+    "properties": {
+      "ownershipId": "string"
+    }
+  }

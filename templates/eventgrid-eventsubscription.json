@@ -1,0 +1,42 @@
+{
+    "name": "string",
+    "type": "Microsoft.EventGrid/eventSubscriptions" or "<provider-namespace>/<resource-type>/providers/eventSubscriptions",
+    "apiVersion": "2018-09-15-preview",
+    "properties": {
+      "deadLetterDestination": {
+        "endpointType": "string",
+        "properties": {
+          "blobContainerName": "string",
+          "resourceId": "string"
+        }
+      },
+      "destination": {
+        "endpointType": "string",
+        "properties": {
+          "endpointUrl": "string",
+          "endpointBaseUrl": "string",
+          "queueName": "string",
+          "resourceId": "string"
+        }
+      },
+      "eventDeliverySchema": "string",
+      "expirationTimeUtc": "string",
+      "filter": {
+        "advancedFilters": {
+          "key": "string",
+          "operatorType": "string",
+          "value": "number or string",
+          "values": ["number or string"]
+        },
+        "subjectBeginsWith": "string",
+        "subjectEndsWith": "string",
+        "isSubjectCaseSensitive": boolean,
+        "includedEventTypes": ["string"]
+      },
+      "labels": ["string"],
+      "retryPolicy": {
+        "eventTimeToLiveInMinutes": integer,
+        "maxDeliveryAttempts": integer
+      }
+    }
+  }

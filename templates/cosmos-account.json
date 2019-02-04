@@ -1,0 +1,37 @@
+{
+    "name": "string",
+    "type": "Microsoft.DocumentDB/databaseAccounts",
+    "apiVersion": "2015-04-08",
+    "location": "string",
+    "tags": {},
+    "kind": "string",
+    "properties": {
+      "consistencyPolicy": {
+        "defaultConsistencyLevel": "string",
+        "maxStalenessPrefix": "integer",
+        "maxIntervalInSeconds": "integer"
+      },
+      "locations": [
+        {
+          "locationName": "string",
+          "failoverPriority": "integer"
+        }
+      ],
+      "databaseAccountOfferType": "Standard",
+      "ipRangeFilter": "string",
+      "isVirtualNetworkFilterEnabled": boolean,
+      "enableAutomaticFailover": boolean,
+      "capabilities": [
+        {
+          "name": "string"
+        }
+      ],
+      "virtualNetworkRules": [
+        {
+          "id": "string",
+          "ignoreMissingVNetServiceEndpoint": boolean
+        }
+      ],
+      "enableMultipleWriteLocations": boolean
+    }
+  }

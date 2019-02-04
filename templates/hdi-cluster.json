@@ -1,0 +1,89 @@
+{
+    "name": "string",
+    "type": "Microsoft.HDInsight/clusters",
+    "apiVersion": "2018-06-01-preview",
+    "location": "string",
+    "tags": {},
+    "properties": {
+      "clusterVersion": "string",
+      "osType": "string",
+      "tier": "string",
+      "clusterDefinition": {
+        "blueprint": "string",
+        "kind": "string",
+        "componentVersion": {},
+        "configurations": {}
+      },
+      "securityProfile": {
+        "directoryType": "ActiveDirectory",
+        "domain": "string",
+        "organizationalUnitDN": "string",
+        "ldapsUrls": [
+          "string"
+        ],
+        "domainUsername": "string",
+        "domainUserPassword": "string",
+        "clusterUsersGroupDNs": [
+          "string"
+        ],
+        "aaddsResourceId": "string",
+        "msiResourceId": "string"
+      },
+      "computeProfile": {
+        "roles": [
+          {
+            "name": "string",
+            "minInstanceCount": "integer",
+            "targetInstanceCount": "integer",
+            "hardwareProfile": {
+              "vmSize": "string"
+            },
+            "osProfile": {
+              "linuxOperatingSystemProfile": {
+                "username": "string",
+                "password": "string",
+                "sshProfile": {
+                  "publicKeys": [
+                    {
+                      "certificateData": "string"
+                    }
+                  ]
+                }
+              }
+            },
+            "virtualNetworkProfile": {
+              "id": "string",
+              "subnet": "string"
+            },
+            "dataDisksGroups": [
+              {
+                "disksPerNode": "integer"
+              }
+            ],
+            "scriptActions": [
+              {
+                "name": "string",
+                "uri": "string",
+                "parameters": "string"
+              }
+            ]
+          }
+        ]
+      },
+      "storageProfile": {
+        "storageaccounts": [
+          {
+            "name": "string",
+            "isDefault": boolean,
+            "container": "string",
+            "fileSystem": "string",
+            "key": "string"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "type": "string",
+      "userAssignedIdentities": {}
+    }
+  }

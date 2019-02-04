@@ -1,0 +1,13 @@
+{
+    "name": "string",
+    "type": "Microsoft.EventGrid/domains",
+    "apiVersion": "2018-09-15-preview",
+    "location": "string",
+    "tags": {},
+    "properties": {
+      "inputSchema": "string",
+      "inputSchemaMapping": {
+        "inputSchemaMappingType": "string"
+      }
+    }
+  }
